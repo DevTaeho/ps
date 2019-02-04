@@ -9,6 +9,7 @@ void swap(int *a, int *b) {
 	*b = temp;
 }
 
+// Hoare partition
 int partition(int *arr, int l, int r) {
 	int pivot = arr[l];
 
@@ -21,6 +22,11 @@ int partition(int *arr, int l, int r) {
 
 	swap(arr[l], arr[j]);
 	return j;
+}
+
+// Lomuto's partition *추가 예정*
+int lomuto_partition(int *arr, int l, int r){
+	return 1;	
 }
 
 void quickSort(int *arr, int left, int right) {
