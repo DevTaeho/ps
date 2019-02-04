@@ -25,13 +25,23 @@ int partition(int *arr, int l, int r) {
 }
 
 // Lomuto's partition *추가 예정*
-int lomuto_partition(int *arr, int l, int r){
-	return 1;	
+int lomuto_partition(int *arr, int l, int r) {
+	int pivot_x = arr[r];
+	int i = l - 1;
+	for (int j = i + 1; j <= r - 1; j++) {	
+		if (arr[j] <= pivot_x) {
+			i++;
+			swap(arr[j], arr[i]);
+		}
+	}
+
+	swap(arr[i + 1], arr[r]);
+	return i + 1;
 }
 
 void quickSort(int *arr, int left, int right) {
 	if (left < right) {
-		int s = partition(arr, left, right);
+		int s = lomuto_partition(arr, left, right);
 		quickSort(arr, left, s - 1);
 		quickSort(arr, s + 1, right);
 	}
