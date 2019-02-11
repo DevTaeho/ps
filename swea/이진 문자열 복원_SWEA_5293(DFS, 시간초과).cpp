@@ -1,3 +1,10 @@
+시간 초과지만 
+ios::sync_with_stdio(false);
+cin.tie(NULL);
+
+두 문장을 넣어주면 속도가 엄청 증가하는 마법..
+
+
 #include <iostream>
 #include <string>
 
