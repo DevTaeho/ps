@@ -4,7 +4,7 @@
 
 using namespace std;
 
-				// 북  동  남  서
+		// 북  동  남  서
 const int dx[4] = {-1, +0, +1, +0};
 const int dy[4] = {+0, +1, +0, -1};
 
